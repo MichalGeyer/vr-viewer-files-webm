@@ -8,8 +8,8 @@ for folder in os.listdir('./pairs-user-study-webm'):
         print('Renamed ' + folder + ' to ' + new_folder)
 
 # itereate over pngs in './pairs-user-study-webm/images' and replace ..png with .png
-# for file in os.listdir('./pairs-user-study-webm/images'):
-#     if file.endswith('..png'):
-#         new_file = file.replace('..png', '.png')
-#         os.rename('./pairs-user-study-webm/images/' + file, './pairs-user-study-webm/images/' + new_file)
-#         print('Renamed ' + file + ' to ' + new_file)
+for file in os.listdir('./pairs-user-study-webm/images'):
+    if file.endswith('..png'):
+        new_file = file.replace('..png', '.png')
+        os.rename('./pairs-user-study-webm/images/' + file, './pairs-user-study-webm/images/' + new_file)
+        print('Renamed ' + file + ' to ' + new_file)
