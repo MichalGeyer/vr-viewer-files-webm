@@ -7,6 +7,13 @@ for folder in os.listdir('./pairs-user-study-webm'):
         os.rename('./pairs-user-study-webm/' + folder, './pairs-user-study-webm/' + new_folder)
         print('Renamed ' + folder + ' to ' + new_folder)
 
+for folder in os.listdir('./pairs-user-study-images'):
+    if folder.endswith('.'):
+        new_folder = folder[:-1]
+        os.rename('./pairs-user-study-images/' + folder, './pairs-user-study-images/' + new_folder)
+        print('Renamed ' + folder + ' to ' + new_folder)
+
+
 # itereate over pngs in './pairs-user-study-webm/images' and replace ..png with .png
 for file in os.listdir('./pairs-user-study-webm/images'):
     if file.endswith('..png'):
